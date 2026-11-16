@@ -1,0 +1,30 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.adelaidasofia/github-mcp",
+  "title": "Self-hosted GitHub MCP server",
+  "description": "Self-hosted GitHub MCP server. PAT auth, stdio transport, transport-agnostic so it works with\u2026",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/adelaidasofia/github-mcp",
+    "source": "github"
+  },
+  "packages": [
+    {
+      "registryType": "mcpb",
+      "identifier": "https://github.com/adelaidasofia/github-mcp/releases/download/v0.1.0/github-mcp.mcpb",
+      "version": "0.1.0",
+      "transport": {
+        "type": "stdio"
+      },
+      "fileSha256": "cab8ee1d6d3d4d65fedc98ba81bf9fb9f0a8272949a9e73aaf906f3daacf68fa",
+      "environmentVariables": [
+        {
+          "name": "GITHUB_TOKEN",
+          "description": "Classic or fine-grained PAT with repo + workflow scopes",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}
